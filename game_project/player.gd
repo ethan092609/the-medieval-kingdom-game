@@ -2,7 +2,8 @@ extends Area2D
 
 @export var speed = 400
 var screen_size
-
+var timer_check = false
+var impatient_on = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -22,9 +23,11 @@ func _process(delta):
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		$AnimatedSprite2D.play("run_side")
+		$AnimatedSprite2D.play()
+		impatient_on = false
+		timer_check = false
 	else:
-		$AnimatedSprite2D.stop()
+		$AnimatedSprite2D.play()
 		
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
@@ -33,3 +36,17 @@ func _process(delta):
 		$AnimatedSprite2D.animation = "run_side"
 		$AnimatedSprite2D.flip_v = false
 		$AnimatedSprite2D.flip_h = velocity.x < 0
+	
+	if velocity.length() == 0:
+		if timer_check == false:
+			$idle_timer.start()
+			timer_check = true
+		
+		if impatient_on == false:
+			$AnimatedSprite2D.animation = "idle"
+			$AnimatedSprite2D.flip_v = false
+		
+
+func _on_idle_timer_timeout():
+	$AnimatedSprite2D.animation = "impatient_idle"
+	impatient_on = true
