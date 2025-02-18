@@ -36,6 +36,8 @@ func _process(delta):
 		$AnimatedSprite2D.animation = "run_side"
 		$AnimatedSprite2D.flip_v = false
 		$AnimatedSprite2D.flip_h = velocity.x < 0
+	elif velocity.y > 0:
+		$AnimatedSprite2D.animation = "run_down"
 	
 	if velocity.length() == 0:
 		if timer_check == false:
