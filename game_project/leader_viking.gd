@@ -1,4 +1,4 @@
-extends Area2D
+extends StaticBody2D
 
 var screen_size
 # Called when the node enters the scene tree for the first time.
