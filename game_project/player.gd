@@ -7,6 +7,7 @@ var impatient_on = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
+	$CollisionShape2D.disabled = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,7 +29,7 @@ func _process(delta):
 		timer_check = false
 	else:
 		$AnimatedSprite2D.play()
-		
+	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
 	
@@ -38,6 +39,8 @@ func _process(delta):
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	elif velocity.y > 0:
 		$AnimatedSprite2D.animation = "run_down"
+	elif velocity.y < 0:
+		$AnimatedSprite2D.animation = "run_up"
 	
 	if velocity.length() == 0:
 		if timer_check == false:
