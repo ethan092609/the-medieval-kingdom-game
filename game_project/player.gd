@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var speed = 400
 var screen_size
@@ -51,6 +51,7 @@ func _process(delta):
 			$AnimatedSprite2D.animation = "idle"
 			$AnimatedSprite2D.flip_v = false
 		
+
 
 func _on_idle_timer_timeout():
 	$AnimatedSprite2D.animation = "impatient_idle"
