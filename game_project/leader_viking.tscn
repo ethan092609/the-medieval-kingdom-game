@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c16k7idotulkx" path="res://Game art/VikingIdle/VikingIdle1.png" id="1_uylna"]
 [ext_resource type="Texture2D" uid="uid://b7vli2x8nbh8b" path="res://Game art/VikingIdle/VikingIdle2.png" id="2_ymp2s"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vsd12"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ygxav"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -15,22 +15,24 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 2.0
+"speed": 2.5
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hjcbo"]
-radius = 32.0
-height = 94.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8bix"]
+radius = 27.0
+height = 68.0
 
-[node name="leader_viking" type="Area2D"]
+[node name="leader_viking" type="StaticBody2D"]
+z_index = 1
 script = ExtResource("1_4jyeb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-7.62939e-06, 0)
-scale = Vector2(0.4375, 0.412109)
-sprite_frames = SubResource("SpriteFrames_vsd12")
+position = Vector2(1, 0)
+scale = Vector2(0.4625, 0.416016)
+sprite_frames = SubResource("SpriteFrames_ygxav")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 1)
-shape = SubResource("CapsuleShape2D_hjcbo")
+position = Vector2(-3, 21)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_u8bix")
