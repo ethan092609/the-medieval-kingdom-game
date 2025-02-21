@@ -2,21 +2,21 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_2rnrd"]
 [ext_resource type="Texture2D" uid="uid://bbkfulrlciwqv" path="res://Game art/Idle/Idle1.png" id="2_3u8uu"]
-[ext_resource type="Texture2D" uid="uid://bfn8c1gmdxk0l" path="res://Game art/DownSlash/SlashDown1.png" id="2_137u8"]
+[ext_resource type="Texture2D" uid="uid://ogi3bvrjg6rb" path="res://Game art/DownSlash/SlashDown1.png" id="2_137u8"]
 [ext_resource type="Texture2D" uid="uid://cs0hqiby4bgfc" path="res://Game art/SLASHIN/Slash1,2.png" id="2_prgfs"]
-[ext_resource type="Texture2D" uid="uid://cwouuswff7vol" path="res://Game art/DownSlash/SlashDown2.png" id="3_0y71v"]
+[ext_resource type="Texture2D" uid="uid://cde58ivff0d1r" path="res://Game art/DownSlash/SlashDown2.png" id="3_0y71v"]
 [ext_resource type="Texture2D" uid="uid://b5hm5rm5w6ocf" path="res://Game art/SLASHIN/Slash3.png" id="3_gn8hn"]
 [ext_resource type="Texture2D" uid="uid://bryjr8aeds2l8" path="res://Game art/Idle/Idle2,4.png" id="3_kjbw5"]
 [ext_resource type="Texture2D" uid="uid://dm8g5oftpunay" path="res://Game art/Idle/Idle3.png" id="4_3q1qs"]
 [ext_resource type="Texture2D" uid="uid://d4a8kf5m8maja" path="res://Game art/SLASHIN/Slash4.png" id="4_7hkxp"]
-[ext_resource type="Texture2D" uid="uid://vnjcw41crdyq" path="res://Game art/DownSlash/SlashDown3.png" id="4_8p0s5"]
+[ext_resource type="Texture2D" uid="uid://dyqjs4y77cf4g" path="res://Game art/DownSlash/SlashDown3.png" id="4_8p0s5"]
 [ext_resource type="Texture2D" uid="uid://ckkaa3dx3fqr" path="res://Game art/SLASHIN/Slash5.png" id="5_3afp4"]
 [ext_resource type="Texture2D" uid="uid://h213ihbi2u82" path="res://Game art/Idle/Idle5.png" id="5_c0mgs"]
-[ext_resource type="Texture2D" uid="uid://dofgkkvqq1nt1" path="res://Game art/DownSlash/SlashDown4.png" id="5_kp5sh"]
+[ext_resource type="Texture2D" uid="uid://dhv3xq57ouwgt" path="res://Game art/DownSlash/SlashDown4.png" id="5_kp5sh"]
 [ext_resource type="Texture2D" uid="uid://cu05whthohiq7" path="res://Game art/Idle/Idle6,8.png" id="6_id5a8"]
-[ext_resource type="Texture2D" uid="uid://cqi2nhuddp63w" path="res://Game art/DownSlash/SlashDown5.png" id="6_je4pw"]
+[ext_resource type="Texture2D" uid="uid://p51dljegs3cn" path="res://Game art/DownSlash/SlashDown5.png" id="6_je4pw"]
 [ext_resource type="Texture2D" uid="uid://bquefr7f00r4" path="res://Game art/SLASHIN/Slash6.png" id="6_ovehx"]
-[ext_resource type="Texture2D" uid="uid://d0lrbskyvyg84" path="res://Game art/DownSlash/SlashDown6.png" id="7_eih54"]
+[ext_resource type="Texture2D" uid="uid://bxtbs25vb5wek" path="res://Game art/DownSlash/SlashDown6.png" id="7_eih54"]
 [ext_resource type="Texture2D" uid="uid://80plrohcqc88" path="res://Game art/Idle/Idle7.png" id="7_ry73p"]
 [ext_resource type="Texture2D" uid="uid://duergfyn3gtu" path="res://Game art/Impatient_Idle/Impatient_Idle1.png" id="8_y32n5"]
 [ext_resource type="Texture2D" uid="uid://c4mx57h06yjoo" path="res://Game art/Impatient_Idle/Impatient_Idle2.png" id="9_31pxo"]
@@ -244,21 +244,21 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_artbo"]
-radius = 25.0
-height = 56.0
+radius = 6.0
+height = 16.0
 
 [node name="player" type="CharacterBody2D"]
 z_index = 1
 script = ExtResource("1_2rnrd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 2.38419e-07)
-scale = Vector2(0.3475, 0.334961)
+position = Vector2(-9.53674e-07, 0)
+scale = Vector2(0.132813, 0.126831)
 sprite_frames = SubResource("SpriteFrames_78v54")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 15)
+position = Vector2(-1, 8)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_artbo")
 
