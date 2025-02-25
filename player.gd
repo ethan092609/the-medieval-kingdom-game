@@ -51,8 +51,9 @@ func _process(delta):
 			$AnimatedSprite2D.animation = "idle"
 			$AnimatedSprite2D.flip_v = false
 		
-
+	move_and_slide()
 
 func _on_idle_timer_timeout():
 	$AnimatedSprite2D.animation = "impatient_idle"
 	impatient_on = true
+	
