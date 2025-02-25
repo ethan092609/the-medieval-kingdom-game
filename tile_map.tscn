@@ -141,6 +141,7 @@ texture = ExtResource("1_jmd54")
 sources/2 = SubResource("TileSetAtlasSource_e5rr6")
 
 [node name="TileMap" type="TileMap"]
+y_sort_enabled = true
 tile_set = SubResource("TileSet_h2bg0")
 format = 2
 
