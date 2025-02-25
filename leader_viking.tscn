@@ -18,9 +18,8 @@ animations = [{
 "speed": 2.5
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8bix"]
-radius = 9.0
-height = 22.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b87wj"]
+size = Vector2(14.9999, 17)
 
 [node name="leader_viking" type="StaticBody2D"]
 z_index = 1
@@ -33,6 +32,7 @@ sprite_frames = SubResource("SpriteFrames_ygxav")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 9)
+y_sort_enabled = true
+position = Vector2(-1.50001, 8.5)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_u8bix")
+shape = SubResource("RectangleShape2D_b87wj")

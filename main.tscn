@@ -11,8 +11,10 @@ script = ExtResource("1_w32lg")
 [node name="TileMap" parent="." instance=ExtResource("4_hhqei")]
 
 [node name="player" parent="TileMap" instance=ExtResource("1_afw1i")]
+position = Vector2(314, 375)
 
 [node name="Camera2D" type="Camera2D" parent="TileMap/player"]
 zoom = Vector2(2.25, 2.25)
 
 [node name="leader_viking" parent="TileMap" instance=ExtResource("2_jmxqr")]
+position = Vector2(476, 379)
