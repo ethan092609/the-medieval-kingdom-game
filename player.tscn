@@ -1,6 +1,6 @@
 [gd_scene load_steps=45 format=3 uid="uid://b357qtufnh36o"]
 
-[ext_resource type="Script" path="res://player/player.gd" id="1_tvg35"]
+[ext_resource type="Script" path="res://player.gd" id="1_hul1n"]
 [ext_resource type="Texture2D" uid="uid://bbkfulrlciwqv" path="res://Game art/player/Idle/Idle1.png" id="2_3u8uu"]
 [ext_resource type="Texture2D" uid="uid://cs0hqiby4bgfc" path="res://Game art/player/SLASHIN/Slash1,2.png" id="2_prgfs"]
 [ext_resource type="Texture2D" uid="uid://b5hm5rm5w6ocf" path="res://Game art/player/SLASHIN/Slash3.png" id="3_gn8hn"]
@@ -220,7 +220,7 @@ height = 16.0
 
 [node name="player" type="CharacterBody2D"]
 z_index = 1
-script = ExtResource("1_tvg35")
+script = ExtResource("1_hul1n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-9.53674e-07, 0)
