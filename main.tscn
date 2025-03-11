@@ -4,10 +4,10 @@
 [ext_resource type="Script" path="res://main.gd" id="1_w32lg"]
 [ext_resource type="PackedScene" uid="uid://ose104o8ndbr" path="res://NPC_Viking_Leader.tscn" id="2_jmxqr"]
 [ext_resource type="PackedScene" uid="uid://chlkq1emydkfc" path="res://NPC_Viking_1.tscn" id="4_3x3un"]
-[ext_resource type="Texture2D" uid="uid://b5xnlrp42fjbf" path="res://Game art/Tilemap/tilemap-with-grass-trees.png" id="4_rmkn0"]
-[ext_resource type="Texture2D" uid="uid://bs21on7bnen5b" path="res://Game art/Tilemap/tilemap-lake-LK.png" id="5_xr6yn"]
+[ext_resource type="Texture2D" uid="uid://7lu0m2wn47vf" path="res://Game art/Tilemap/tilemap-with-grass-trees.png" id="4_rmkn0"]
+[ext_resource type="Texture2D" uid="uid://cprskfyxi12sp" path="res://Game art/Tilemap/tilemap-lake-LK.png" id="5_xr6yn"]
 [ext_resource type="PackedScene" uid="uid://le2awxrdtwhi" path="res://NPC_Viking_2.tscn" id="7_3w14i"]
-[ext_resource type="PackedScene" uid="uid://cnhtxf6twwus6" path="res://NPC_Leader_Fishing.tscn" id="8_7p8j3"]
+[ext_resource type="PackedScene" uid="uid://cnhtxf6twwus6" path="res://NPC_Fishing_Leader.tscn" id="8_7p8j3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wpv2k"]
 texture = ExtResource("4_rmkn0")
@@ -428,19 +428,19 @@ position = Vector2(182, 163)
 [node name="Camera2D" type="Camera2D" parent="TileMap/player"]
 zoom = Vector2(2.25, 2.25)
 
-[node name="NPC_Viking_Leader" parent="TileMap" instance=ExtResource("2_jmxqr")]
+[node name="leader_viking" parent="TileMap" instance=ExtResource("2_jmxqr")]
 y_sort_enabled = true
 position = Vector2(207, 162)
 
-[node name="NPC_Viking_1" parent="TileMap" instance=ExtResource("4_3x3un")]
+[node name="VikingNPC1" parent="TileMap" instance=ExtResource("4_3x3un")]
 position = Vector2(227, 161)
 
-[node name="NPC_Viking_2" parent="TileMap" instance=ExtResource("7_3w14i")]
+[node name="VikingNPC2" parent="TileMap" instance=ExtResource("7_3w14i")]
 position = Vector2(248, 161)
 
-[node name="NPC_Fishing_Leader" parent="TileMap" instance=ExtResource("8_7p8j3")]
+[node name="leader_fishing" parent="TileMap" instance=ExtResource("8_7p8j3")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(270, 163)
+position = Vector2(269, 165)
 collision_layer = 2
 collision_mask = 7
