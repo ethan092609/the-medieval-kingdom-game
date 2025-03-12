@@ -1,5 +1,5 @@
 ## RULES
-dont merge anything avelusamy pulls
+dont merge anything aditya pulls
 ## anyways
 
 Every time you want to update code:
