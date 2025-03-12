@@ -23,8 +23,19 @@ func _process(_delta):
 		$TileMap/NPC_Viking_2/AnimatedSprite2D.flip_h = true
 	else:
 		$TileMap/NPC_Viking_2/AnimatedSprite2D.flip_h = false
-		
+	
+	if $TileMap/player.position.x < $TileMap/NPC_Viking_3.position.x:
+		$TileMap/NPC_Viking_3/AnimatedSprite2D.flip_h = true
+	else:
+		$TileMap/NPC_Viking_3/AnimatedSprite2D.flip_h = false
+	
 	if $TileMap/player.position.x < $TileMap/NPC_Fishing_Leader.position.x:
 		$TileMap/NPC_Fishing_Leader/AnimatedSprite2D.flip_h = true
 	else:
 		$TileMap/NPC_Fishing_Leader/AnimatedSprite2D.flip_h = false
+		
+	if $TileMap/player.position.x < $TileMap/NPC_Fishing_1.position.x:
+		$TileMap/NPC_Fishing_1/AnimatedSprite2D.flip_h = true
+	else:
+		$TileMap/NPC_Fishing_1/AnimatedSprite2D.flip_h = false
+		
