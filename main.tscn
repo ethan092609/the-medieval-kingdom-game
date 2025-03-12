@@ -1,17 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://b4hc7mf02t2av"]
+[gd_scene load_steps=12 format=3 uid="uid://b4hc7mf02t2av"]
 
 [ext_resource type="PackedScene" uid="uid://b357qtufnh36o" path="res://player.tscn" id="1_afw1i"]
 [ext_resource type="Script" path="res://main.gd" id="1_w32lg"]
-[ext_resource type="PackedScene" uid="uid://ose104o8ndbr" path="res://NPC_Viking_Leader.tscn" id="2_jmxqr"]
-[ext_resource type="PackedScene" uid="uid://chlkq1emydkfc" path="res://NPC_Viking_1.tscn" id="4_3x3un"]
-[ext_resource type="Texture2D" uid="uid://cbh244xj1d5qx" path="res://Game art/Tilemap/tilemap-with-grass-trees.png" id="4_rmkn0"]
-[ext_resource type="Texture2D" uid="uid://6rvqum8gohxo" path="res://Game art/Tilemap/tilemap-lake-LK.png" id="5_xr6yn"]
-[ext_resource type="PackedScene" uid="uid://le2awxrdtwhi" path="res://NPC_Viking_2.tscn" id="7_3w14i"]
-[ext_resource type="PackedScene" uid="uid://cnhtxf6twwus6" path="res://NPC_Fishing_Leader.tscn" id="8_ew1nh"]
-[ext_resource type="PackedScene" uid="uid://dj3t3euu7spuh" path="res://NPC_Viking_3.tscn" id="8_fd2g6"]
-[ext_resource type="PackedScene" uid="uid://mr56owkptmdc" path="res://NPC_Fishing_1.tscn" id="9_7utbh"]
-[ext_resource type="PackedScene" uid="uid://dkgli1f404sv0" path="res://NPC_Fishing_Bird.tscn" id="10_c2w1l"]
-[ext_resource type="PackedScene" uid="uid://cp08vm1y11ae6" path="res://NPC_Fishing_Sus.tscn" id="12_oat1v"]
+[ext_resource type="PackedScene" uid="uid://ose104o8ndbr" path="res://leader_viking.tscn" id="2_jmxqr"]
+[ext_resource type="PackedScene" uid="uid://chlkq1emydkfc" path="res://viking_npc_1.tscn" id="4_3x3un"]
+[ext_resource type="Texture2D" uid="uid://6t4d8um730u4" path="res://Game art/Tilemap/tilemap-with-grass-trees.png" id="4_rmkn0"]
+[ext_resource type="Texture2D" uid="uid://jw6ijvhw5lf3" path="res://Game art/Tilemap/tilemap-lake-LK.png" id="5_xr6yn"]
+[ext_resource type="PackedScene" uid="uid://le2awxrdtwhi" path="res://viking_npc_2.tscn" id="7_3w14i"]
+[ext_resource type="PackedScene" uid="uid://cnhtxf6twwus6" path="res://leader_fishing.tscn" id="8_7p8j3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wpv2k"]
 texture = ExtResource("4_rmkn0")
@@ -432,32 +428,19 @@ position = Vector2(182, 163)
 [node name="Camera2D" type="Camera2D" parent="TileMap/player"]
 zoom = Vector2(2.25, 2.25)
 
-[node name="NPC_Viking_Leader" parent="TileMap" instance=ExtResource("2_jmxqr")]
-position = Vector2(163, 86)
+[node name="leader_viking" parent="TileMap" instance=ExtResource("2_jmxqr")]
+y_sort_enabled = true
+position = Vector2(207, 162)
 
-[node name="NPC_Viking_1" parent="TileMap" instance=ExtResource("4_3x3un")]
-position = Vector2(274, 149)
+[node name="VikingNPC1" parent="TileMap" instance=ExtResource("4_3x3un")]
+position = Vector2(227, 161)
 
-[node name="NPC_Viking_2" parent="TileMap" instance=ExtResource("7_3w14i")]
-position = Vector2(387, 100)
+[node name="VikingNPC2" parent="TileMap" instance=ExtResource("7_3w14i")]
+position = Vector2(248, 161)
 
-[node name="NPC_Viking_3" parent="TileMap" instance=ExtResource("8_fd2g6")]
+[node name="leader_fishing" parent="TileMap" instance=ExtResource("8_7p8j3")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(379, 49)
+position = Vector2(269, 165)
 collision_layer = 2
 collision_mask = 7
-
-[node name="NPC_Fishing_Leader" parent="TileMap" instance=ExtResource("8_ew1nh")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(102, 188)
-
-[node name="NPC_Fishing_1" parent="TileMap" instance=ExtResource("9_7utbh")]
-position = Vector2(200, 162)
-
-[node name="NPC_Fishing_Bird" parent="TileMap" instance=ExtResource("10_c2w1l")]
-position = Vector2(219, 165)
-
-[node name="NPC_Fishing_Sus" parent="TileMap" instance=ExtResource("12_oat1v")]
-position = Vector2(241, 163)
