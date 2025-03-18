@@ -4,6 +4,8 @@ extends CharacterBody2D
 var screen_size
 var timer_check = false
 var impatient_on = false
+
+@onready var actionable_finder: Area2D = $actionable_finder
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -13,6 +15,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
+	if Input.is_action_just_pressed("dialogue"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
+	
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
 	if Input.is_action_pressed("move_left"):
