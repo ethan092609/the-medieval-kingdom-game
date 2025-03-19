@@ -1,14 +1,13 @@
 extends CharacterBody2D
 
 @export var speed = 200
-var screen_size
 var timer_check = false
 var impatient_on = false
 
 @onready var actionable_finder: Area2D = $actionable_finder
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	screen_size = get_viewport_rect().size
+	pass
 	
 
 
@@ -39,7 +38,6 @@ func _process(delta):
 		$AnimatedSprite2D.play()
 	
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
 	
 	if velocity.x != 0:
 		$AnimatedSprite2D.animation = "run_side"

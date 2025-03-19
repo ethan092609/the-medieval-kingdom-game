@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://ba4x44vyg0q8b"]
 
-[ext_resource type="Texture2D" uid="uid://c4bvhvys36n0h" path="res://Game art/Tilemap/tilemap-with-grass-trees.png" id="1_2wyvp"]
-[ext_resource type="Texture2D" uid="uid://bxn5d6j03d4y8" path="res://Game art/Tilemap/tilemap-lake-LK.png" id="2_fx81m"]
+[ext_resource type="Texture2D" uid="uid://d2it2ccwfgpvp" path="res://Game art/Tilemap/tilemap-with-grass-trees.png" id="1_2wyvp"]
+[ext_resource type="Texture2D" uid="uid://2asyv0ohbdsv" path="res://Game art/Tilemap/tilemap-lake-LK.png" id="2_fx81m"]
 [ext_resource type="PackedScene" uid="uid://b357qtufnh36o" path="res://player.tscn" id="3_wk5ou"]
 [ext_resource type="PackedScene" uid="uid://ose104o8ndbr" path="res://NPC_Viking_Leader.tscn" id="4_14nk4"]
 [ext_resource type="PackedScene" uid="uid://chlkq1emydkfc" path="res://NPC_Viking_1.tscn" id="5_ypwki"]
