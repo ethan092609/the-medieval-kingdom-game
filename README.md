@@ -1,9 +1,9 @@
 ## People you're allowed to merge:
-LuckyJames128
-Code2221
-Half2beC00L
-mikielmyers123
-batchbridget
+- LuckyJames128
+- Code2221
+- Half2beC00L
+- mikielmyers123
+- batchbridget
 #### Notice to those not listed:
 Please don't :(
 ## anyways
